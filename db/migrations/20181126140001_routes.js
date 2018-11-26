@@ -4,10 +4,11 @@ exports.up = function(knex, Promise) {
         table.increments();
         table.string('route_name');
         table.string('driver_id');
+        table.string('truck_id');
         table.string('destination');
         table.time('pickup_time');
-        table.integer('distance')
-        table.string('days')
+        table.integer('distance');
+        table.string('days');
         table.timestamps(true, true);
     })
 };

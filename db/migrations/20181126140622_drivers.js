@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
         table.increments();
         table.string('driver_firstname');
         table.string('driver_lastname');
-        table.string('img_url');
+        table.text('img_url');
         table.timestamps(true, true);
     })
 };
