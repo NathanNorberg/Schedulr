@@ -7,11 +7,11 @@ module.exports = {
   },
 
   add: function(req, res) {
-    knex("drivers").insert({
+    knex("trucks").insert({
       truck_name: req.body.truck_name
     }).then(() =>{
       res.redirect('/homepage')
     })
-  }
+  },
 
 }

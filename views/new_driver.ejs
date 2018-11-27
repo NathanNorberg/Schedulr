@@ -3,15 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>New Driver</title>
+    <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
-    <h1>Register A New Driver</h1>
-    <form class="" action="" method="post">
-      <input type="text" name="first_name" placeholder="Driver First Name">
-      <input type="text" name="last_name" placeholder="Driver Last Name">
-      <input type="text" name="img_url" placeholder="Driver Picture">
-      <button type="submit" name="button">Submit</button>
-    </form>
-    <a href="/homepage"><button type="button" name="button">Back</button></a>
+    <div class="container">
+      <h1 class="center-align">Register A New Driver</h1>
+      <form class="" action="/add" method="post">
+        <input type="text" name="first_name" placeholder="Driver First Name">
+        <input type="text" name="last_name" placeholder="Driver Last Name">
+        <input type="text" name="img_url" placeholder="Driver Picture">
+        <button type="submit" class="waves-effect waves-light btn" name="button">Submit</button>
+      </form>
+      <br>
+      <br>
+      <a href="/homepage"><button class="waves-effect waves-light btn" type="button" name="button">Back</button></a>
+    </div>
   </body>
 </html>

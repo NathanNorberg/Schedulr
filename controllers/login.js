@@ -5,6 +5,7 @@ module.exports = {
   index: function(req, res) {
     res.render("login");
   },
+<<<<<<< HEAD
   
   login: function (req, res) {
     knex('users').where('user_email', req.body.user_email)
@@ -28,4 +29,23 @@ module.exports = {
         }
       })
   }
+=======
+
+  login: (req, res) => {
+    knex("users").where("user_email", req.body.user_email).then((results) =>{
+      if(results.length !== 0){
+        let user = results[0];
+        if(user.user_password == req.body.password){
+          req.session.user = user;
+          res.redirect("/homepage")
+        }else{
+          res.redirect("/login")
+        }
+      }else{
+        res.redirect("/login")
+      }
+    })
+  },
+
+>>>>>>> 469b423379c5fadc9faeec759cc2bfbdfc906f37
 }
