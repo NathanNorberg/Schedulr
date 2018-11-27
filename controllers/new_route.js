@@ -7,7 +7,7 @@ module.exports = {
   },
 
   add: function(req, res) {
-    knex("drivers").insert({
+    knex("new_route").insert({
       route_name: req.body.route_name,
       driver_id: req.body.driver_id,
       truck_id: req.body.truck_id,
