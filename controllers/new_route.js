@@ -18,7 +18,7 @@ module.exports = {
     }).then(() =>{
       res.redirect('/homepage')
     })
-  }
+  },
 
 
 }

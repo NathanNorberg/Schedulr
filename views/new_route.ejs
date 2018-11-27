@@ -3,18 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>New Route</title>
+    <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
-    <h1>Create A New Route</h1>
-    <form class="" action="/add" method="post">
-      <input type="string" name="name" placeholder="Route Name">
-      <input type="string" name="driver_id" placeholder="Driver id">
-      <input type="string" name="destination" placeholder="Destination">
-      <input type="time" name="pickup_time" placeholder="Pickup Time">
-      <input type="integer" name="distance" placeholder="Distance">
-      <input type="string" name="days" placeholder="Days">
-      <button type="submit" name="button">Submit</button>
-    </form>
-    <a href="/homepage"><button type="button" name="button">Back</button></a>
+    <div class="container">
+      <h1>Create A New Route</h1>
+      <form class="" action="" method="post">
+        <input type="text" name="route_name" placeholder="Route Name">
+        <input type="integer" name="driver_id" placeholder="Driver id">
+        <input type="integer" name="truck_id" placeholder="Truck id">
+        <input type="text" name="destination" placeholder="Destination">
+        <input type="time" name="pickup_time" placeholder="Pickup Time">
+        <input type="integer" name="distance" placeholder="Distance">
+        <input type="integer" name="days" placeholder="Days">
+        <button type="submit" class="waves-effect waves-light btn" name="button">Submit</button>
+      </form>
+      <br>
+      <br>
+      <a href="/homepage"><button class="waves-effect waves-light btn" type="button" name="button">Back</button></a>
+    </div>
   </body>
 </html>

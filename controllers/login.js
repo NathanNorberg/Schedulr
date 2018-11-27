@@ -7,10 +7,10 @@ module.exports = {
   },
 
   login: (req, res) => {
-    knex("users").where("email", req.body.email).then((results) =>{
+    knex("users").where("user_email", req.body.user_email).then((results) =>{
       if(results.length !== 0){
         let user = results[0];
-        if(user.password == req.body.password){
+        if(user.user_password == req.body.password){
           req.session.user = user;
           res.redirect("/homepage")
         }else{
@@ -21,6 +21,5 @@ module.exports = {
       }
     })
   },
-
 
 }
