@@ -19,11 +19,8 @@ module.exports = (app) => {
 
 //Require authentication past this point
 
-<<<<<<< HEAD
   app.use(auth);
-=======
-  app.use(auth)
->>>>>>> 4f987879f2b6d688d8e37fc068a76f8c19908b2c
+
   app.get('/homepage', homepage.index);
 
 //Forms to create new drivers, trucks and routes
@@ -39,15 +36,9 @@ module.exports = (app) => {
 }
 
 
-<<<<<<< HEAD
-function auth(req, res, next){
-  if(!req.session.user){
-    res.redirect("/login");
-=======
 const auth = (req, res, next) => {
   if(!req.session.user){
     res.redirect("/login")
->>>>>>> 4f987879f2b6d688d8e37fc068a76f8c19908b2c
     return;
   }
   next();
