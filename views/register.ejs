@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Register New User</title>
   </head>
   <body>
-    <h1>Register Now</h1>
-    <form class="" action="/register" method="post">
-      <input type="text" name="user_name" placeholder="Company Name">
-      <input type="text" name="user_email" placeholder="Company Email">
-      <input type="text" name="user_password" placeholder="Password">
-      <input type="text" name="confirmation" placeholder="Confirm Password">
-      <button type="submit" name="button">Submit</button>
-    </form>
-    <p>Already a user? <a href="/login">Sign in here</a></p>
+    <h1 class="center-align">Register Now</h1>
+    <div class="row">
+      <form class="col s6 offset-s3" action="/register" method="post">
+        <!-- Name Input -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="user_name" placeholder="Company Name" type="text">
+          </div>
+        </div>
+        <!-- Email Input -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="user_email" placeholder="Email" type="email" class="validate">
+          </div>
+        </div>
+        <!-- Password Input -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="user_password" placeholder="Password" type="password" class="validate">
+          </div>
+        </div>
+        <!-- Password Confirmation -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="passwordConfirm" placeholder="Confirm Password" type="password" class="validate">
+          </div>
+        </div>
+        <!-- Submit Button -->
+        <div class="row">
+          <button class="btn waves-effect waves-dark" type="submit">Register
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        <!-- Return to login -->
+        <div class="row">
+          <a href="/login"><button class="btn waves-effect waves-dark" type="button">Already a user?</button></a>
+        </div>
+      </form>
+    </div>
+
+
   </body>
 </html>

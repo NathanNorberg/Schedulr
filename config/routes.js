@@ -8,29 +8,17 @@ const new_route = require("../controllers/new_route.js")
 
 
 module.exports = function(app){
-<<<<<<< HEAD
-// Login
-  app.get('/', login.index);
-
-// Register
-=======
 
 
   app.get('/login', login.index);
   app.post('/login/login', login.login);
 
->>>>>>> 659b2f2a702e8cae5749df0aae54679adcfc0e39
   app.get('/register', register.index);
   app.post('/register', register.create)
 
 //Require authentication past this point
 
-<<<<<<< HEAD
-  app.use(auth)
-=======
-// app.use(auth)
-
->>>>>>> 659b2f2a702e8cae5749df0aae54679adcfc0e39
+  // app.use(auth)
   app.get('/homepage', homepage.index);
 
 //Forms to create new drivers, trucks and routes
@@ -48,11 +36,11 @@ module.exports = function(app){
 }
 
 
-const auth = (req, res, next) => {
-  if(!req.session.doctor){
-    res.redirect("/")
-    return;
-  }
-  next();
-}
+// const auth = (req, res, next) => {
+//   if(!req.session.user){
+//     res.redirect("/login")
+//     return;
+//   }
+//   next();
+// }
 

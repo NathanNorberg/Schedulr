@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Login</title>
   </head>
   <body>
-    <h1>Schedulr</h1>
-    <h5>Schedulng Made Easy</h5>
-    <h3>Login</h3>
-    <form action="" method="post">
-      <input type="email" name="email" placeholder="Email">
-      <input type="password" name="password" placeholder="Password">
-      <button type="submit" name="button">Submit</button>
-    </form>
-    <a href="/register"><button type="button" name="button">Create New User</button></a>
+    <div class="container">
+      <h1 class="center-align">Schedulr</h1>
+      <h5 class="center-align">Schedulng Made Easy</h5>
+    </div>
+  <div class="container">
+    <!-- Login Form -->
+    <div class="row">
+      <h3 class="col s6 offset-s3">Login</h3>
+      <form class="col s6 offset-s3" action="/login" method="post">
+        <!-- Email Input -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="user_email" placeholder="Email" type="email" class="validate">
+          </div>
+        </div>
+        <!-- Password Input -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="user_password" id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <!-- Submit Button -->
+        <div class="row">
+          <button class="btn waves-effect waves-dark" type="submit">Login
+            <i class="material-icons right">send</i>
+          </button>
+          <a href="/register"><button class="center-align btn waves-effect waves-dark" type="button" name="button">Create New
+          User</button></a>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
