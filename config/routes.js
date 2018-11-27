@@ -8,19 +8,17 @@ const new_route = require("../controllers/new_route.js")
 
 
 module.exports = function(app){
-
+// Login
   app.get('/', login.index);
 
-
+// Register
   app.get('/register', register.index);
-
+  app.post('/register', register.create)
 
 //Require authentication past this point
 
-  // app.use(auth)
-
+  app.use(auth)
   app.get('/homepage', homepage.index);
-
 
 //Forms to create new drivers, trucks and routes
   app.get('/new_driver', new_driver.index);
@@ -35,7 +33,7 @@ module.exports = function(app){
 
 }
 
-/*
+
 const auth = (req, res, next) => {
   if(!req.session.doctor){
     res.redirect("/login")
@@ -43,4 +41,4 @@ const auth = (req, res, next) => {
   }
   next();
 }
-*/
+
