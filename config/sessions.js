@@ -8,7 +8,6 @@ module.exports = function(app){
         tablename: 'sessions' // optional. Defaults to 'sessions'
     });
 
-
     app.use(session({
         secret: 'keyboard cat',
         cookie: {

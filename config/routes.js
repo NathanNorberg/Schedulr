@@ -19,11 +19,7 @@ module.exports = function(app){
 
 //Require authentication past this point
 
-  // app.use(auth)
-<<<<<<< HEAD
-=======
-
->>>>>>> 469b423379c5fadc9faeec759cc2bfbdfc906f37
+  app.use(auth)
   app.get('/homepage', homepage.index);
 
 //Forms to create new drivers, trucks and routes
@@ -36,23 +32,13 @@ module.exports = function(app){
   app.get('/new_route', new_route.index);
   app.post('/new_route', new_route.add);
 
-
-
 }
 
 
-// const auth = (req, res, next) => {
-//   if(!req.session.user){
-<<<<<<< HEAD
-//     res.redirect("/login")
-=======
-//     res.redirect("/")
->>>>>>> 469b423379c5fadc9faeec759cc2bfbdfc906f37
-//     return;
-//   }
-//   next();
-// }
-<<<<<<< HEAD
-
-=======
->>>>>>> 469b423379c5fadc9faeec759cc2bfbdfc906f37
+const auth = (req, res, next) => {
+  if(!req.session.user){
+    res.redirect("/login")
+    return;
+  }
+  next();
+}
