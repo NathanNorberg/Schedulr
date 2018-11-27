@@ -4,6 +4,8 @@ module.exports = {
       connection: {
         database: "schedulr",
         host: "localhost",
+        user: "postgres",
+        password: "7117"
       },
       migrations: {
           directory: __dirname + '/db/migrations',
