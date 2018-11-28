@@ -12,10 +12,33 @@
   <body>
     <div class="container-fluid">
       <h3 class="center-align">Welcome back "Name"</h3>
-      <div class="row center-align">
+      <div class="row ">
         <div class="col s2">
           <h3 class="center-align"><u>Queue</u></h3>
           <h5>Unassigned Routes:</h5>
+
+
+          <!-- Modal Trigger -->
+         <a class="card lime lighten-3 darken-1 modal-trigger card-content white-text" href="#modal1">Route Name & Num</a>
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4><strong>Route Name and Number</strong></h4>
+              <h6><strong>Driver:</strong></h6>
+              <p>Unassigned</p>
+              <h6><strong>Truck:</strong></h6>
+              <p>Unassigned</p>
+              <h6><strong>Distance:</strong></h6>
+              <p></p>
+              <h6><strong>Estimated Duration:</strong></h6>
+              <p></p>
+              <h6><strong>Pay:</strong></h6>
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+          </div>
         </div>
         <div class="col s9">
           <table>
@@ -34,15 +57,25 @@
              <!-- One tr for every new entry -->
              <tr>
                <td>
-                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                  <!-- Modal Trigger -->
+                 <a class="card green lighten-1 darken-1 modal-trigger card-content white-text" href="#modal1">Route Name & Num</a>
                 <!-- Modal Structure -->
-                <div id="modal1" class="modal">
+                <div id="modal2" class="modal">
                   <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
+                    <h4><strong>Route Name and Number</strong></h4>
+                    <h6><strong>Driver:</strong></h6>
+                    <p></p>
+                    <h6><strong>Truck:</strong></h6>
+                    <p></p>
+                    <h6><strong>Distance:</strong></h6>
+                    <p></p>
+                    <h6><strong>Estimated Duration:</strong></h6>
+                    <p></p>
+                    <h6><strong>Pay:</strong></h6>
+                    <p></p>
                   </div>
                   <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                   </div>
                 </div>
                </td>
