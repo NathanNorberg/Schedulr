@@ -7,7 +7,7 @@ module.exports = {
   },
 
   add: function(req, res) {
-    knex("new_route").insert({
+    knex("routes").insert({
       route_name: req.body.route_name,
       driver_id: req.body.driver_id,
       truck_id: req.body.truck_id,
@@ -15,6 +15,7 @@ module.exports = {
       pickup_time: req.body.pickup_time,
       distance: req.body.distance,
       days: req.body.days,
+      user_id: req.params.id
     }).then(() =>{
       res.redirect('/homepage')
     })

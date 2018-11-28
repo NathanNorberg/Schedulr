@@ -8,10 +8,10 @@ module.exports = {
 
   add: function(req, res) {
     knex("trucks").insert({
-      truck_name: req.body.truck_name
+      truck_name: req.body.truck_name,
     }).then(() =>{
       res.redirect('/homepage')
     })
-  },
+  }
 
 }

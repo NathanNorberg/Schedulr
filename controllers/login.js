@@ -5,7 +5,7 @@ module.exports = {
   index: function(req, res) {
     res.render("login", {});
   },
-  
+
   login: function (req, res) {
     knex('users').where('user_email', req.body.user_email)
       .then((user) => {
@@ -21,10 +21,10 @@ module.exports = {
               res.redirect('/homepage');
             })
           } else {
-            res.redirect('/login');
+            res.redirect('/');
           }
         } else {
-          res.redirect('/login');
+          res.redirect('/');
         }
       })
   }

@@ -5,6 +5,12 @@ exports.up = function(knex, Promise) {
         table.string('driver_firstname');
         table.string('driver_lastname');
         table.text('img_url');
+        table.integer("user_id")
+          .references("id")
+          .inTable("users")
+          .onDelete("CASCADE")
+          .notNullable()
+          .index();
         table.timestamps(true, true);
     })
 };

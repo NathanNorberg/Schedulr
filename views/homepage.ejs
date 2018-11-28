@@ -11,9 +11,11 @@
   </head>
   <body>
     <div class="container-fluid">
+      <h3 class="center-align">Welcome back "Name"</h3>
       <div class="row center-align">
         <div class="col s2">
-          <h3 class="center-align">hello</h3>
+          <h3 class="center-align"><u>Queue</u></h3>
+          <h5>Unassigned Routes:</h5>
         </div>
         <div class="col s9">
           <table>
@@ -31,7 +33,19 @@
            <tbody>
              <!-- One tr for every new entry -->
              <tr>
-               <td></td>
+               <td>
+                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                  </div>
+                </div>
+               </td>
              </tr>
            </tbody>
          </table>

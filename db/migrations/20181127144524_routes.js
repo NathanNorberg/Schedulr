@@ -16,6 +16,12 @@ exports.up = function(knex, Promise) {
         table.string('destination');
         table.time('pickup_time');
         table.integer('distance');
+        table.integer("user_id")
+          .references("id")
+          .inTable("users")
+          .onDelete("CASCADE")
+          .notNullable()
+          .index();
         table.timestamps(true, true);
     })
 };
