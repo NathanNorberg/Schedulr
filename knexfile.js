@@ -3,9 +3,7 @@ module.exports = {
       client: 'pg',
       connection: {
         database: "schedulr",
-        host: "localhost",
-        user: "postgres",
-        password: "7117"
+        host: "localhost"
       },
       migrations: {
           directory: __dirname + '/db/migrations',
