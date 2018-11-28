@@ -7,9 +7,16 @@ module.exports = {
   },
 
   create:  function(req, res){
-    knex("users").insert(req.body).then((results) =>{
-      res.redirect("/")
-    })
+    if (req.body.user_password !== req.body.confirmation){
+      res.redirect("/register")
+    } else {
+      knex("users").insert({
+        user_name: req.body.user_name,
+        user_email: req.body.user_email,
+        user_password: req.body.user_password
+      }).then(() =>{
+        res.redirect("/")
+      })
+    } 
   }
-
 }

@@ -10,21 +10,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Login</title>
     <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   </head>
-  <body>
+  <body class="blue-grey darken-1">
     <div class="container">
-      <h1 class="center-align">Schedulr</h1>
-      <h5 class="center-align">Schedulng Made Easy</h5>
-    </div>
-    <div class="container">
+      <h1 class="center-align white-text">Schedulr</h1>
+      <h5 class="center-align white-text">Schedulng Made Easy</h5>
       <!-- Login Form -->
       <div class="row">
-        <h3 class="col s6 offset-s3">Login</h3>
+        <h3 class="col s6 offset-s3 white-text">Login</h3>
         <form class="col s6 offset-s3" action="/login" method="post">
           <!-- Email Input -->
           <div class="row">
@@ -39,16 +37,14 @@
               <label for="password">Password</label>
             </div>
           </div>
-        </div>
-        <!-- Submit Button -->
-        <div class="row center">
+          <!-- Submit Button -->
           <button class="btn waves-effect waves-dark" type="submit">Login
             <i class="material-icons right">send</i>
           </button>
-          <a href="/register"><button class="center-align btn waves-effect waves-dark" type="button" name="button">Create New
-          User</button></a>
-        </div>
-      </form>
+          <a href="/register"><button class="right center-align btn waves-effect waves-dark" type="button" name="button">Create New
+            User</button></a>
+          </form>
+      </div>
     </div>
 
     <!-- Initialize Materialize components -->

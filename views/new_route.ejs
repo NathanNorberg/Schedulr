@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>New Route</title>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Compiled and minified CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Login</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-   <!-- Compiled and minified JavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid blue-grey darken-1">
       <div class="row">
         <div class="col s6 offset-s3">
           <h1 class="center-align">Create A New Route</h1>
         </div>
       </div>
       <div class="row">
-        <div class="col s6 offset-s3">
-          <form class="" action="/add_route" method="post">
-            <input type="text" name="name" placeholder="Route Name">
-            <input type="text" name="destination" placeholder="Destination">
+        <form class="col s6 offset-s3" action="/add_route" method="post">
+          <!-- Route name -->
+          <div class="row">
             <div class="input-field col s12">
-              <select name="dates">
+              <input type="text" name="route_name" placeholder="Route Name">
+            </div>
+          </div>
+          <!-- Destination -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="destination" placeholder="Destination">
+            </div>
+          </div>
+          <!-- Date -->
+          <div class="row">
+            <div class="input-field col s12">
+              <select multiple name="dates" id="dates">
                 <option value="mon">Monday</option>
                 <option value="tues">Tuesday</option>
                 <option value="wed">Wednesday</option>
@@ -32,15 +49,27 @@
                 <option value="sun">Sunday</option>
               </select>
             </div>
-            <input type="text" name="pickup_time" placeholder="Pickup Time" class="timepicker">
-            <!-- insert distance input if necessary -->
-            <button type="submit" class="waves-effect waves-light btn" name="button">Submit</button>
-          </form>
-        </div>
+          </div>
+          <!-- Pickup time -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="pickup_time" placeholder="Pickup Time" class="timepicker">
+            </div>
+          </div>
+          <!-- distance -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="integer" name="distance" placeholder="Distance">
+            </div>
+          </div>
+          <button type="submit" class="waves-effect waves-light btn">Submit 
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
       </div>
       <div class="row">
         <div class="col s6 offset-s3">
-          <a href="/homepage"><button class="waves-effect waves-light btn" type="button" name="button">Back</button></a>
+          <a href="/homepage"><button class="waves-effect waves-light btn" type="button">Back <i class="material-icons right">send</i></button></a>
         </div>
       </div>
     </div>

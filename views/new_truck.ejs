@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>New Truck</title>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Compiled and minified CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-   <!-- Compiled and minified JavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>New Truck</title>
   </head>
-  <body>
+  <body class="blue-grey">
     <div class="container">
-      <h1 class="center-align">Register A New Truck</h1>
-      <form class="" action="/add_truck" method="post">
-        <input type="text" name="new_truck" placeholder="Truck Name">
-        <button class="waves-effect waves-light btn" type="submit" name="button">Submit</button>
-      </form>
-      <br>
-      <br>
-      <a href="/homepage"><button class="waves-effect waves-light btn" type="button" name="button">Back</button></a>
+      <h1 class="center-align white-text">Register A New Truck</h1>
+      <div class="row">
+        <form class="col s6 offset-s3" action="/add_truck" method="post">
+          <!-- First name -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="truck_name" placeholder="Truck Name">
+            </div>
+          </div>
+          <button class="waves-effect waves-dark btn" type="submit">submit 
+            <i class="material-icons right">send</i></button>
+          <a href="/homepage"><button class="right waves-effect waves-light btn" type="button">Back 
+            <i class="material-icons right">send</i></button></a>
+        </form>
+      </div>
     </div>
   </body>
 </html>
