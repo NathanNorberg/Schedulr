@@ -8,7 +8,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Login</title>
+    <title>New Route</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -27,15 +27,10 @@
           <!-- Route name -->
           <div class="row">
             <div class="input-field col s12">
-              <input type="text" name="route_name" placeholder="Route Name">
+              <input type="text" name="name" placeholder="Route Name">
             </div>
           </div>
-          <!-- Destination -->
-          <div class="row">
-            <div class="input-field col s12">
-              <input type="text" name="destination" placeholder="Destination">
-            </div>
-          </div>
+          <!-- dock_length currently not being included -->
           <!-- Date -->
           <div class="row">
             <div class="input-field col s12">
@@ -56,12 +51,14 @@
               <input type="text" name="pickup_time" placeholder="Pickup Time" class="timepicker">
             </div>
           </div>
-          <!-- distance -->
+          <!-- Destination -->
           <div class="row">
             <div class="input-field col s12">
-              <input type="integer" name="distance" placeholder="Distance">
+              <input type="text" name="destination" placeholder="Destination">
             </div>
           </div>
+          <!-- distance currently not being included -->
+          <!-- Submit Button -->
           <button type="submit" class="waves-effect waves-light btn">Submit 
             <i class="material-icons right">send</i>
           </button>
