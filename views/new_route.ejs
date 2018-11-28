@@ -11,17 +11,41 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="center-align">Create A New Route</h1>
-      <form class="" action="/add_route" method="post">
-        <input type="text" name="route_name" placeholder="Route Name">
-        <input type="text" name="destination" placeholder="Destination">
-        <input type="time" name="pickup_time" placeholder="Pickup Time">
-        <input type="integer" name="distance" placeholder="Distance">
-        <button type="submit" class="waves-effect waves-light btn" name="button">Submit</button>
-      </form>
-      <br>
-      <br>
-      <a href="/homepage"><button class="waves-effect waves-light btn" type="button" name="button">Back</button></a>
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <h1 class="center-align">Create A New Route</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <form class="" action="/add_route" method="post">
+            <input type="text" name="name" placeholder="Route Name">
+            <input type="text" name="destination" placeholder="Destination">
+            <div class="input-field col s12">
+              <select name="dates">
+                <option value="mon">Monday</option>
+                <option value="tues">Tuesday</option>
+                <option value="wed">Wednesday</option>
+                <option value="thur">Thursday</option>
+                <option value="fri">Friday</option>
+                <option value="sat">Saturday</option>
+                <option value="sun">Sunday</option>
+              </select>
+            </div>
+            <input type="text" name="pickup_time" placeholder="Pickup Time" class="timepicker">
+            <!-- insert distance input if necessary -->
+            <button type="submit" class="waves-effect waves-light btn" name="button">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <a href="/homepage"><button class="waves-effect waves-light btn" type="button" name="button">Back</button></a>
+        </div>
+      </div>
     </div>
+
+    <!-- Initialize Materialize components -->
+    <script src="/javascript/initializeMaterialize.js"></script>
   </body>
 </html>
