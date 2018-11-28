@@ -11,6 +11,7 @@
     <title>Register New User</title>
   </head>
   <body>
+    <div class="container blue-grey darken-1">
     <h1 class="center-align">Register Now</h1>
     <div class="row">
       <form class="col s6 offset-s3" action="/register" method="post">
@@ -42,15 +43,12 @@
         <div class="row">
           <button class="btn waves-effect waves-dark" type="submit">Register
             <i class="material-icons right">send</i>
+            <!-- Return to login -->
+            <a href="/login"><button class="btn waves-effect waves-dark float-left" type="button">Already a user?</button></a>
           </button>
-        </div>
-        <!-- Return to login -->
-        <div class="row">
-          <a href="/login"><button class="btn waves-effect waves-dark" type="button">Already a user?</button></a>
-        </div>
       </form>
     </div>
-
-
+  </div>
+    </body>
   </body>
 </html>
