@@ -17,16 +17,12 @@ module.exports = (app) => {
   app.get('/register', register.index);
   app.post('/register', register.create)
 
-//Require authentication past this point
+// Require authentication past this point
 
-<<<<<<< HEAD
   app.use(auth);
-=======
-  app.use(auth)
->>>>>>> 4f987879f2b6d688d8e37fc068a76f8c19908b2c
   app.get('/homepage', homepage.index);
 
-//Forms to create new drivers, trucks and routes
+// Forms to create new drivers, trucks and routes
   app.get('/new_driver', new_driver.index);
   app.post('/new_driver', new_driver.add);
 
@@ -39,15 +35,9 @@ module.exports = (app) => {
 }
 
 
-<<<<<<< HEAD
 function auth(req, res, next){
   if(!req.session.user){
-    res.redirect("/login");
-=======
-const auth = (req, res, next) => {
-  if(!req.session.user){
-    res.redirect("/login")
->>>>>>> 4f987879f2b6d688d8e37fc068a76f8c19908b2c
+    res.redirect('/login');
     return;
   }
   next();
