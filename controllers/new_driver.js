@@ -1,12 +1,12 @@
 const knex = require("../db/knex.js");
 
 module.exports = {
-  // CHANGE ME TO AN ACTUAL FUNCTION
   index: function(req, res) {
     res.render("new_driver");
   },
 
   add: function(req, res) {
+    // update route to reflect tables latest version
     knex("drivers").insert({
       driver_firstname: req.body.driver_firstname,
       driver_lastname: req.body.driver_lastname,

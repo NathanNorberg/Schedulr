@@ -7,18 +7,22 @@ module.exports = {
   },
 
   add: function(req, res) {
-    knex("routes").insert({
-      route_name: req.body.route_name,
-      driver_id: req.body.driver_id,
-      truck_id: req.body.truck_id,
-      destination: req.body.destination,
-      pickup_time: req.body.pickup_time,
-      distance: req.body.distance,
-      days: req.body.days,
-      user_id: req.params.id
-    }).then(() =>{
-      res.redirect('/homepage')
-    })
+    let promises = req.body.dates.map(date => {
+      return knex('routes').insert({
+        name: req.body.name,
+        dock_length: 3,
+        day: date,
+        recurring: false,
+        pickup_time: req.body.pickup_time,
+        destination: req.body.destination,
+        company_id: req.session.user.id,
+        driver_id: undefined,
+        truck_id: undefined
+      })
+    });
+    Promise.all(promises).then(() => {
+      res.redirect('/new_route');
+    });
   },
 
 

@@ -14,7 +14,6 @@ module.exports = {
           // user exists, now verify passwords match
           if (user[0].user_password === req.body.user_password) {
             // User is valid
-            console.log('user is valid', req.body.user_password);
             req.session.user = user[0];
             req.session.save(() => {
               res.redirect('/homepage');
