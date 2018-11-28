@@ -11,33 +11,32 @@ module.exports = (app) => {
 
 
 // Login
-  app.get('/login', login.index);
+  app.get('/', login.index);
   app.post('/login', login.login);
 
   app.get('/register', register.index);
   app.post('/register', register.create)
 
-//Require authentication past this point
+// Require authentication past this point
 
   app.use(auth);
   app.get('/homepage', homepage.index);
 
-//Forms to create new drivers, trucks and routes
+// Forms to create new drivers, trucks and routes
   app.get('/new_driver', new_driver.index);
-  app.post('/new_driver', new_driver.add);
+  app.post('/add_driver', new_driver.add);
 
   app.get('/new_truck', new_truck.index);
-  app.post('/new_truck', new_truck.add);
+  app.post('/add_truck', new_truck.add);
 
   app.get('/new_route', new_route.index);
-  app.post('/new_route', new_route.add);
+  app.post('/add_route', new_route.add);
 
 }
 
-
-const auth = (req, res, next) => {
+function auth(req, res, next){
   if(!req.session.user){
-    res.redirect("/login")
+    res.redirect('/login');
     return;
   }
   next();

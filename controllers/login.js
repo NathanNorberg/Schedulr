@@ -5,11 +5,10 @@ module.exports = {
   index: function(req, res) {
     res.render("login", {});
   },
-  
+
   login: function (req, res) {
     knex('users').where('user_email', req.body.user_email)
       .then((user) => {
-        console.log(user);
         // verify a user exists that matches this username
         if (user[0]) {
           // user exists, now verify passwords match
@@ -21,10 +20,10 @@ module.exports = {
               res.redirect('/homepage');
             })
           } else {
-            res.redirect('/login');
+            res.redirect('/');
           }
         } else {
-          res.redirect('/login');
+          res.redirect('/');
         }
       })
   }
