@@ -9,6 +9,7 @@ module.exports = {
   add: function(req, res) {
     knex("trucks").insert({
       truck_name: req.body.truck_name,
+      user_id: req.session.user.id
     }).then(() =>{
       res.redirect('/homepage')
     })

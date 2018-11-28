@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Register New User</title>
   </head>
-  <body>
-    <div class="container blue-grey darken-1">
-    <h1 class="center-align">Register Now</h1>
+<body class="blue-grey darken-1">
+    <div class="container">
+    <h1 class="center-align white-text">Register Now</h1>
     <div class="row">
       <form class="col s6 offset-s3" action="/register" method="post">
         <!-- Name Input -->
@@ -34,18 +34,17 @@
           </div>
         </div>
         <!-- Password Confirmation -->
-        <!-- <div class="row">
+        <div class="row">
           <div class="input-field col s12">
             <input name="passwordConfirm" placeholder="Confirm Password" type="password" class="validate">
           </div>
-        </div> -->
+        </div>
         <!-- Submit Button -->
-        <div class="row">
-          <button class="btn waves-effect waves-dark" type="submit">Register
-            <i class="material-icons right">send</i>
-            <!-- Return to login -->
-            <a href="/login"><button class="btn waves-effect waves-dark float-left" type="button">Already a user?</button></a>
-          </button>
+        <button class="btn waves-effect waves-dark" type="submit">Register
+          <i class="material-icons right">send</i></button>
+          <!-- Return to login -->
+        <a href="/"><button class="right btn waves-effect waves-dark" type="button">Already a user? 
+          <i class="material-icons right">send</i></button></a>
       </form>
     </div>
   </div>
