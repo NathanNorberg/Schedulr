@@ -5,9 +5,9 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('trucks').insert([
-        {truck_name: 'short bus'},
-        {truck_name: 'long bus'},
-        {truck_name: 'big bus'}
+        {vin: '2479', length: 2, owner: 3},
+        {vin: '2010', length: 2, owner: 3},
+        {vin: '2495', length: 2, owner: 3}
       ]);
     });
 };

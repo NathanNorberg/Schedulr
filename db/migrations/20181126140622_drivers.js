@@ -2,15 +2,15 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('drivers', (table) => {
         table.increments();
-        table.string('driver_firstname');
-        table.string('driver_lastname');
-        table.text('img_url');
-        table.integer("user_id")
-          .references("id")
-          .inTable("users")
-          .onDelete("CASCADE")
-          .notNullable()
-          .index();
+        table.string('name'); // driver's name
+        table.integer('wage'); // hourly wage
+        table.days('daysOff');  // array of days off?
+        table.integer("bossman")
+            .references("id")
+            .inTable("users")
+            .onDelete("CASCADE")
+            .notNullable()
+            .index();
         table.timestamps(true, true);
     })
 };
