@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
         table.increments();
         table.string('name'); // driver's name
         table.integer('wage'); // hourly wage
-        table.days('daysOff');  // array of days off?
+        table.date('daysOff');  // array of days off?
         table.integer("bossman")
             .references("id")
             .inTable("users")
