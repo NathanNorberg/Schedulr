@@ -37,7 +37,7 @@
             <!-- for every driver in our drivers array -->
             <% for (let driver of drivers) { %>
               <!-- check the routes that have been assigned and see if our driver is 'included' in that list -->
-              <% if (!routes.filter(route => route.driver !== undefined).includes(driver)) { %>
+              <% if (!assigned.filter(route => route.driver !== undefined).includes(driver)) { %>
                 <!-- if they are not currently assigned to a route, list them below -->
                 <li><%= driver.name %></li>
               <% } %>
@@ -49,7 +49,7 @@
           <h6>Routes</h6>
           <!-- Dynnamically generate list of unassigned routes -->
           <ul>
-            <% for (let route of routes) { %>
+            <% for (let route of unassigned) { %>
               <% if (!route.driver_id || !route.truck_id) { %>
                 <li><%= route.name %></li>
               <% } %>
