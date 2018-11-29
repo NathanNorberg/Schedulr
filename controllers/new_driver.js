@@ -8,10 +8,9 @@ module.exports = {
   add: function(req, res) {
     // update route to reflect tables latest version
     knex("drivers").insert({
-      driver_firstname: req.body.driver_firstname,
-      driver_lastname: req.body.driver_lastname,
+      name: req.body.name,
       img_url: req.body.img_url,
-      user_id: req.params.id
+      bossman: req.params.id
     }).then(() =>{
       res.redirect('/homepage')
     })
