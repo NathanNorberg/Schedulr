@@ -15,15 +15,21 @@
       <h1 class="center-align white-text">Register A New Truck</h1>
       <div class="row">
         <form class="col s6 offset-s3" action="/add_truck" method="post">
-          <!-- First name -->
+          <!-- VIN Number -->
           <div class="row">
             <div class="input-field col s12">
-              <input type="text" name="truck_name" placeholder="Truck Name">
+              <input type="string" name="vin" placeholder="VIN">
             </div>
           </div>
-          <button class="waves-effect waves-dark btn" type="submit">submit 
+          <!-- Length of truck -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="integer" name="length" placeholder="Length">
+            </div>
+          </div>
+          <button class="waves-effect waves-dark btn" type="submit">submit
             <i class="material-icons right">send</i></button>
-          <a href="/homepage"><button class="right waves-effect waves-light btn" type="button">Back 
+          <a href="/homepage"><button class="right waves-effect waves-light btn" type="button">Back
             <i class="material-icons right">send</i></button></a>
         </form>
       </div>
