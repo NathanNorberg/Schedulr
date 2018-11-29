@@ -7,6 +7,8 @@ module.exports = {
   },
 
   add: function(req, res) {
+    if(!Array.isArray(req.body.dates))
+      req.body.dates = [req.body.dates];
     let promises = req.body.dates.map(date => {
       return knex('routes').insert({
         name: req.body.name,

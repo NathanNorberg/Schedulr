@@ -13,6 +13,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <title>New Route</title>
+    <style media="screen">
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
   </head>
 
   <body>
@@ -109,9 +120,9 @@
                 <td class="center">
                   <% if (sunday[0]) { %>
                     <!-- Modal Trigger -->
-                      <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><%= sunday[0].name %></a>
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal<%= sunday[0].id %>"><%= sunday[0].name %></a>
                       <!-- Modal Structure -->
-                      <div id="modal1" class="modal">
+                      <div id="modal<%= sunday[0].id %>" class="modal">
                         <div class="modal-content">
                           <h4><%= sunday[0].name %></h4>
                           <h6><strong>Day:</strong></h6>
@@ -136,9 +147,9 @@
                 <td class="center">
                   <% if (monday[0]) { %>
                     <!-- Modal Trigger -->
-                      <a class="waves-effect waves-light btn modal-trigger" href="#modal2"><%= monday[0].name %></a>
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal<%= monday[0].id %>"><%= monday[0].name %></a>
                       <!-- Modal Structure -->
-                      <div id="modal2" class="modal">
+                      <div id="modal<%= monday[0].id %>" class="modal">
                         <div class="modal-content">
                           <h4><%= monday[0].name %></h4>
                           <h6><strong>Day:</strong></h6>
@@ -163,9 +174,9 @@
                 <td class="center">
                   <% if (tuesday[0]) { %>
                     <!-- Modal Trigger -->
-                      <a class="waves-effect waves-light btn modal-trigger" href="#modal3"><%= tuesday[0].name %></a>
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal<%= tuesday[0].id %>"><%= tuesday[0].name %></a>
                       <!-- Modal Structure -->
-                      <div id="modal3" class="modal">
+                      <div id="modal<%= tuesday[0].id %>" class="modal">
                         <div class="modal-content">
                           <h4><%= tuesday[0].name %></h4>
                           <h6><strong>Day:</strong></h6>
@@ -190,9 +201,9 @@
                 <td class="center">
                   <% if (wednesday[0]) { %>
                     <!-- Modal Trigger -->
-                      <a class="waves-effect waves-light btn modal-trigger" href="#modal4"><%= wednesday[0].name %></a>
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal<%= wednesday[0].id %>"><%= wednesday[0].name %></a>
                       <!-- Modal Structure -->
-                      <div id="modal4" class="modal">
+                      <div id="modal<%= wednesday[0].id %>" class="modal">
                         <div class="modal-content">
                           <h4><%= wednesday[0].name %></h4>
                           <h6><strong>Day:</strong></h6>
@@ -217,9 +228,9 @@
                 <td class="center">
                   <% if (thursday[0]) { %>
                     <!-- Modal Trigger -->
-                      <a class="waves-effect waves-light btn modal-trigger" href="#modal5"><%= thursday[0].name %></a>
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal<%= thursday[0].id %>"><%= thursday[0].name %></a>
                       <!-- Modal Structure -->
-                      <div id="modal5" class="modal">
+                      <div id="modal<%= thursday[0].id %>" class="modal">
                         <div class="modal-content">
                           <h4><%= thursday[0].name %></h4>
                           <h6><strong>Day:</strong></h6>
@@ -244,9 +255,9 @@
                 <td class="center">
                   <% if (friday[0]) { %>
                     <!-- Modal Trigger -->
-                      <a class="waves-effect waves-light btn modal-trigger" href="#modal6"><%= friday[0].name %></a>
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal<%= friday[0].id %>"><%= friday[0].name %></a>
                       <!-- Modal Structure -->
-                      <div id="modal6" class="modal">
+                      <div id="modal<%= friday[0].id %>" class="modal">
                         <div class="modal-content">
                           <h4><%= friday[0].name %></h4>
                           <h6><strong>Day:</strong></h6>
@@ -271,9 +282,9 @@
                 <td class="center">
                   <% if (saturday[0]) { %>
                     <!-- Modal Trigger -->
-                      <a class="waves-effect waves-light btn modal-trigger" href="#modal7"><%= saturday[0].name %></a>
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal<%= saturday[0].id %>"><%= saturday[0].name %></a>
                       <!-- Modal Structure -->
-                      <div id="modal7" class="modal">
+                      <div id="modal<%= saturday[0].id %>" class="modal">
                         <div class="modal-content">
                           <h4><%= saturday[0].name %></h4>
                           <h6><strong>Day:</strong></h6>
@@ -299,8 +310,13 @@
             </tbody>
           </table>
         </div>
+        <div class="container">
+        <h5>Our Goal:</h5>
+          <p>Schedulr is committed to providing you the best and most efficient way to organize your schedulng.  With an intuitive design and user friendly environment we are unmatched in functionality.  We look forward to working with you.  Please reach out with any questions by emailing us at:</p>
+          <p>schedulr.support@schedulr.com</p>
+        </div>
         <!-- Buttons -->
-        <div class="row center">
+        <!-- <div class="row center">
           <div class="col s4">
             <a href="/new_driver"><button class="waves-effect waves-light btn" type="button" name="button">Create New Driver</button></a>
           </div>
@@ -310,10 +326,26 @@
           <div class="col s4">
             <a href="/new_route"><button class="waves-effect waves-light btn" type="button" name="button">Create New Route</button></a>
           </div>
-        </div>
-
+        </div> -->
       </div>
     </main>
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row center">
+            <div class="col s4">
+              <a href="/new_driver"><button class="waves-effect waves-light btn" type="button" name="button">Create New Driver</button></a>
+            </div>
+            <div class="col s4">
+              <a href="/new_truck"><button class="waves-effect waves-light btn" type="button" name="button">Create New Truck</button></a>
+            </div>
+            <div class="col s4">
+              <a href="/new_route"><button class="waves-effect waves-light btn" type="button" name="button">Create New Route</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Initialize Materialize components -->
     <script src="/javascript/initializeMaterialize.js"></script>
