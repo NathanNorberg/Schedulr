@@ -37,9 +37,6 @@
               <!-- Dynamically generate list of driver names below -->
               <div class="collapsible-body">
                 <ul>
-                  <li>hi</li>
-                  <li>hi</li>
-                  <li>hi</li>
                   <!-- for every driver in our drivers array -->
                   <% for (let driver of drivers) { %>
                     <!-- check the routes that have been assigned and see if our driver is 'included' in that list -->
@@ -57,12 +54,9 @@
               <!-- Dynnamically generate list of unassigned routes -->
               <div class="collapsible-body">
                 <ul>
-                  <li>hi</li>
-                  <li>hi</li>
-                  <li>hi</li>
                   <% for (let route of unassigned) { %>
                     <% if (!route.driver_id || !route.truck_id) { %>
-                      <li>Hi I'm here<%= route.name %></li>
+                      <li><%= route.name %></li>
                     <% } %>
                   <% } %>
                 </ul>
@@ -108,51 +102,51 @@
               <tr>
                 <!-- # of table data cells will be 7/row, ie one for each day -->
                 <!-- Sunday -->
-                <td>
+                <td class="center">
                   <% if (sunday[0]) { %>
-                    <%= sunday[0] %>
+                    <%= sunday[0].name %>
                     <% sunday = sunday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Monday -->
-                <td>
+                <td class="center">
                   <% if (monday[0]) { %>
-                    <%= monday[0] %>
+                    <%= monday[0].name %>
                     <% monday = monday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Tuesday -->
-                <td>
+                <td class="center">
                   <% if (tuesday[0]) { %>
-                    <%= tuesday[0] %>
+                    <%= tuesday[0].name %>
                     <% tuesday = tuesday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Wednesday -->
-                <td>
+                <td class="center">
                   <% if (wednesday[0]) { %>
-                    <%= wednesday[0] %>
+                    <%= wednesday[0].name %>
                     <% wednesday = wednesday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Thursday -->
-                <td>
+                <td class="center">
                   <% if (thursday[0]) { %>
-                    <%= thursday[0] %>
+                    <%= thursday[0].name %>
                     <% thursday = thursday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Friday -->
-                <td>
+                <td class="center">
                   <% if (friday[0]) { %>
-                    <%= friday[0] %>
+                    <%= friday[0].name %>
                     <% friday = friday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Saturday -->
-                <td>
+                <td class="center">
                   <% if (saturday[0]) { %>
-                    <%= saturday[0] %>
+                    <%= saturday[0].name %>
                     <% saturday = saturday.splice(1) %>
                   <% } %>
                 </td>

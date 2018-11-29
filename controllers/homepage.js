@@ -26,7 +26,7 @@ module.exports = {
         let sunday = assignedRoutes.filter(route => route.day === 'sun');
         // figure out how many routes appear on your busiest day
         let routeCount = Math.max(monday.length, tuesday.length, wednesday.length, thursday.length, friday.length, saturday.length, sunday.length);
-        console.log(unassignedRoutes);
+        console.log(monday[0]);
 
 
         // pass data to homepage repackaged with 'readable' names
