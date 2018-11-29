@@ -55,7 +55,7 @@ module.exports = {
     // wait for promises to resolve, avoids race condition
     Promise.all([routePromise, driverPromise, truckPromise])
       .then( results => {
-        console.log(results[1]);
+        // console.log(results[1]);
         return scheduler.createSchedule(results[0], results[1], results[2])
       })
       .then( (schedule) => {
