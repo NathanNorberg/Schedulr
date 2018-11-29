@@ -29,31 +29,45 @@
       <ul id="slide-out" class="sidenav center">
         <!-- Title element for Sidenav -->
         <li><h3>Queue</h3></li>
-        <!-- List drivers below under heading -->
-        <li>
-          <h6>Drivers</h6>
-          <!-- Dynamically generate list of driver names below -->
-          <ul>
-            <!-- for every driver in our drivers array -->
-            <% for (let driver of drivers) { %>
-              <!-- check the routes that have been assigned and see if our driver is 'included' in that list -->
-              <% if (!assigned.filter(route => route.driver !== undefined).includes(driver)) { %>
-                <!-- if they are not currently assigned to a route, list them below -->
-                <li><%= driver.name %></li>
-              <% } %>
-            <% } %>
-          </ul>
-        </li>
-        <!-- List unassigned routes below -->
-        <li>
-          <h6>Routes</h6>
-          <!-- Dynnamically generate list of unassigned routes -->
-          <ul>
-            <% for (let route of unassigned) { %>
-              <% if (!route.driver_id || !route.truck_id) { %>
-                <li><%= route.name %></li>
-              <% } %>
-            <% } %>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <!-- List drivers below under heading -->
+            <li>
+              <a class="collapsible-header"><h6>Drivers</h6></a>
+              <!-- Dynamically generate list of driver names below -->
+              <div class="collapsible-body">
+                <ul>
+                  <li>hi</li>
+                  <li>hi</li>
+                  <li>hi</li>
+                  <!-- for every driver in our drivers array -->
+                  <% for (let driver of drivers) { %>
+                    <!-- check the routes that have been assigned and see if our driver is 'included' in that list -->
+                    <% if (!assigned.filter(route => route.driver !== undefined).includes(driver)) { %>
+                      <!-- if they are not currently assigned to a route, list them below -->
+                      <li><%= driver.name %></li>
+                    <% } %>
+                  <% } %>
+                </ul>
+              </div>
+            </li>
+            <!-- List unassigned routes below -->
+            <li>
+              <a class="collapsible-header"><h6>Routes</h6></a>
+              <!-- Dynnamically generate list of unassigned routes -->
+              <div class="collapsible-body">
+                <ul>
+                  <li>hi</li>
+                  <li>hi</li>
+                  <li>hi</li>
+                  <% for (let route of unassigned) { %>
+                    <% if (!route.driver_id || !route.truck_id) { %>
+                      <li>Hi I'm here<%= route.name %></li>
+                    <% } %>
+                  <% } %>
+                </ul>
+              </div>
+            </li>
           </ul>
         </li>
         <!-- Assign Schedules Button -->
