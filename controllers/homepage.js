@@ -5,9 +5,9 @@ module.exports = {
 
   index: function(req, res) {
     // pull data from relevant tables returning as a Promise object
-    let routePromise = knex('routes').where('company_id', req.session.user.id)
-    let driverPromise = knex('drivers').where('bossman', req.session.user.id)
-    let truckPromise = knex('trucks').where('owner', req.session.user.id)
+    let routePromise = knex('routes').where('company_id', req.session.user.id);
+    let driverPromise = knex('drivers').where('bossman', req.session.user.id);
+    let truckPromise = knex('trucks').where('owner', req.session.user.id);
 
     // wait for promises to resolve, avoids race condition
     Promise.all([routePromise, driverPromise, truckPromise])
@@ -26,8 +26,6 @@ module.exports = {
         let sunday = assignedRoutes.filter(route => route.day === 'sun');
         // figure out how many routes appear on your busiest day
         let routeCount = Math.max(monday.length, tuesday.length, wednesday.length, thursday.length, friday.length, saturday.length, sunday.length);
-        console.log(monday[0]);
-
 
         // pass data to homepage repackaged with 'readable' names
         res.render('homepage', {
@@ -49,6 +47,20 @@ module.exports = {
   },
 
   schedule: function(req, res) {
-    res.redirect('/homepage');
+    // pull data from relevant tables returning as a Promise object
+    let routePromise = knex('routes').where('company_id', req.session.user.id);
+    let driverPromise = knex('drivers').where('bossman', req.session.user.id);
+    let truckPromise = knex('trucks').where('owner', req.session.user.id);
+
+    // wait for promises to resolve, avoids race condition
+    Promise.all([routePromise, driverPromise, truckPromise])
+      .then( results => {
+        let schedule = scheduler.createSchedule(results[0], results[1], results[2])
+        console.log(schedule);
+
+        res.redirect('/homepage');
+      })
+
+    // res.redirect('/homepage');
   }
 }
