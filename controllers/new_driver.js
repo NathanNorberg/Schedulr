@@ -10,7 +10,8 @@ module.exports = {
     knex("drivers").insert({
       name: req.body.name,
       img_url: req.body.img_url,
-      bossman: req.params.id
+      bossman: req.session.user.id,
+      daysOff: req.body.daysOff
     }).then(() =>{
       res.redirect('/homepage')
     })

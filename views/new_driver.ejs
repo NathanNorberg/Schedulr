@@ -8,37 +8,73 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>New Driver</title>    <!-- Compiled and minified JavaScript -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>New Driver</title>
   </head>
   <body class="blue-grey darken-1">
+    <!-- Page Content Goes Below -->
     <div class="container">
-      <h1 class="center-align white-text">Register A New Driver</h1>
+      <!-- Welcome Message -->
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <h1 class="center-align white-text">Register A New Driver</h1>
+        </div>
+      </div>
+      <!-- New Driver Registration Form -->
       <div class="row">
         <form class="col s6 offset-s3" action="/add_driver" method="post">
-      <!-- First name -->
-      <div class="row">
-        <div class="input-field col s12">
-          <input type="text" name="name" placeholder="Driver Name">
-        </div>
-      </div>
-      <!-- last name -->
-      <!-- <div class="row">
-        <div class="input-field col s12">
-          <input type="text" name="last_name" placeholder="Driver Last Name">
-        </div>
-      </div> -->
-      <!-- Img URL -->
-      <div class="row">
-        <div class="input-field col s12">
-          <input type="text" name="img_url" placeholder="Driver Picture">
-        </div>
-      </div>
-      <button class="waves-effect waves-dark btn" type="submit">Submit
-        <i class="material-icons right">send</i></button>
-      <a href="/homepage"><button class="right waves-effect waves-darl btn" type="button">Back
-        <i class="material-icons right">send</i></button></a>
+          <!-- First name -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="name" placeholder="Driver Name">
+            </div>
+          </div>
+          <!-- last name -->
+          <!-- <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="last_name" placeholder="Driver Last Name">
+            </div>
+          </div> -->
+          <!-- Img URL -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="img_url" placeholder="Driver Picture">
+            </div>
+          </div>
+          <!-- Days Off Dropdown -->
+          <div class="row">
+            <div class="input-field col s12">
+              <select multiple name="daysOff" id="dates">
+                <option value="" disabled>Dates</option>
+                <option value="mon">Monday</option>
+                <option value="tue">Tuesday</option>
+                <option value="wed">Wednesday</option>
+                <option value="thur">Thursday</option>
+                <option value="fri">Friday</option>
+                <option value="sat">Saturday</option>
+                <option value="sun">Sunday</option>
+              </select>
+            </div>
+          </div>
+          <!-- Submit button -->
+          <button class="waves-effect waves-dark btn" type="submit">Submit
+            <i class="material-icons right">send</i></button>
         </form>
       </div>
+      <!-- Back Button -->
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <a href="/homepage"><button class="waves-effect waves-darl btn" type="button">Back
+            <i class="material-icons right">send</i></button>
+          </a>
+        </div>
+      </div>
     </div>
+
+    <!-- Initialize Materialize components -->
+    <script src="/javascript/initializeMaterialize.js"></script>
   </body>
 </html>
