@@ -27,7 +27,7 @@ module.exports = {
           assignedRoutes.filter(route => route.day === 'sat').length,
           assignedRoutes.filter(route => route.day === 'sun').length
         )
-        console.log(longestDay);
+        console.log(unassignedRoutes);
 
 
         // pass data to homepage repackaged with 'readable' names
