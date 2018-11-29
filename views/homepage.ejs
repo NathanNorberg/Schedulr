@@ -21,7 +21,11 @@
       <nav>
         <div class="nav-wrapper">
           <ul class="left">
-            <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">more_vert</i></a></li>
+            <li class="left-align"><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">more_vert</i></a></li>
+          </ul>
+          <ul class="right">
+            <li><h4>Schedulr</h4></li>
+            <li><p>where schedulng happens</p></li>
           </ul>
         </div>
       </nav>
@@ -37,9 +41,6 @@
               <!-- Dynamically generate list of driver names below -->
               <div class="collapsible-body">
                 <ul>
-                  <li>hi</li>
-                  <li>hi</li>
-                  <li>hi</li>
                   <!-- for every driver in our drivers array -->
                   <% for (let driver of drivers) { %>
                     <!-- check the routes that have been assigned and see if our driver is 'included' in that list -->
@@ -57,9 +58,6 @@
               <!-- Dynnamically generate list of unassigned routes -->
               <div class="collapsible-body">
                 <ul>
-                  <li>hi</li>
-                  <li>hi</li>
-                  <li>hi</li>
                   <% for (let route of unassigned) { %>
                     <% if (!route.driver_id || !route.truck_id) { %>
                       <li>Hi I'm here<%= route.name %></li>
