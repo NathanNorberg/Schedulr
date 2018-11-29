@@ -90,23 +90,60 @@
             <!-- Table body -->
             <tbody>
               <!-- # of table rows will be equal to # of routes on day with most routes -->
+              <% for (let i = 0; i < longestDay; i++) { %>
               <tr>
                 <!-- # of table data cells will be 7/row, ie one for each day -->
                 <!-- Sunday -->
-                <td></td>
+                <td>
+                  <% if (sunday[0]) { %>
+                    <%= sunday[0] %>
+                    <% sunday = sunday.splice(1) %>
+                  <% } %>
+                </td>
                 <!-- Monday -->
-                <td></td>
+                <td>
+                  <% if (monday[0]) { %>
+                    <%= monday[0] %>
+                    <% monday = monday.splice(1) %>
+                  <% } %>
+                </td>
                 <!-- Tuesday -->
-                <td></td>
+                <td>
+                  <% if (tuesday[0]) { %>
+                    <%= tuesday[0] %>
+                    <% tuesday = tuesday.splice(1) %>
+                  <% } %>
+                </td>
                 <!-- Wednesday -->
-                <td></td>
+                <td>
+                  <% if (wednesday[0]) { %>
+                    <%= wednesday[0] %>
+                    <% wednesday = wednesday.splice(1) %>
+                  <% } %>
+                </td>
                 <!-- Thursday -->
-                <td></td>
+                <td>
+                  <% if (thursday[0]) { %>
+                    <%= thursday[0] %>
+                    <% thursday = thursday.splice(1) %>
+                  <% } %>
+                </td>
                 <!-- Friday -->
-                <td></td>
+                <td>
+                  <% if (friday[0]) { %>
+                    <%= friday[0] %>
+                    <% friday = friday.splice(1) %>
+                  <% } %>
+                </td>
                 <!-- Saturday -->
-                <td></td>
+                <td>
+                  <% if (saturday[0]) { %>
+                    <%= saturday[0] %>
+                    <% saturday = saturday.splice(1) %>
+                  <% } %>
+                </td>
               </tr>
+              <% } %>
             </tbody>
           </table>
         </div>
