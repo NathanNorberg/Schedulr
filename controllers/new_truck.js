@@ -9,8 +9,9 @@ module.exports = {
     // update route to reflect tables latest version
     // add id to registrer truck to current session user only
     knex("trucks").insert({
-      truck_name: req.body.truck_name,
-      user_id: req.session.user.id
+      vin: req.body.vin,
+      length: req.body.length,
+      owner: req.session.user.id
     }).then(() =>{
       res.redirect('/homepage')
     })

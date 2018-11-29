@@ -8,31 +8,57 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <title>New Truck</title>
   </head>
   <body class="blue-grey">
+    <!-- Place Page Content Below -->
     <div class="container">
-      <h1 class="center-align white-text">Register A New Truck</h1>
+      <!-- Welcome Message -->
+      <div class="row">
+        <div class="col s12">
+          <h1 class="center-align white-text">Register A New Truck</h1>
+        </div>
+      </div>
+      <!-- Register New Truck Form -->
       <div class="row">
         <form class="col s6 offset-s3" action="/add_truck" method="post">
           <!-- VIN Number -->
           <div class="row">
             <div class="input-field col s12">
-              <input type="string" name="vin" placeholder="VIN">
+              <input type="text" name="vin" placeholder="VIN">
             </div>
           </div>
           <!-- Length of truck -->
           <div class="row">
             <div class="input-field col s12">
-              <input type="integer" name="length" placeholder="Length">
+              <select name="length" id="truck_length">
+                <option selected value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+              <label for="truck_length">Select Truck Length</label>
             </div>
           </div>
+          <!-- Submit Form -->
           <button class="waves-effect waves-dark btn" type="submit">submit
             <i class="material-icons right">send</i></button>
-          <a href="/homepage"><button class="right waves-effect waves-light btn" type="button">Back
-            <i class="material-icons right">send</i></button></a>
         </form>
       </div>
+      <!-- Back Button -->
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <a href="/homepage"><button class="waves-effect waves-light btn" type="button">Back
+            <i class="material-icons right">send</i></button>
+          </a>
+        </div>
+      </div>
     </div>
+
+    <!-- Initialize Materialize components -->
+    <script src="/javascript/initializeMaterialize.js"></script>
   </body>
 </html>
