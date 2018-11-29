@@ -6,8 +6,6 @@ module.exports = {
   },
 
   add: function(req, res) {
-    // update route to reflect tables latest version
-    // add id to registrer truck to current session user only
     knex("trucks").insert({
       vin: req.body.vin,
       length: req.body.length,
