@@ -55,12 +55,24 @@ module.exports = {
     // wait for promises to resolve, avoids race condition
     Promise.all([routePromise, driverPromise, truckPromise])
       .then( results => {
-        let schedule = scheduler.createSchedule(results[0], results[1], results[2])
-        console.log(schedule);
-
-        res.redirect('/homepage');
+        console.log(results[1]);
+        return scheduler.createSchedule(results[0], results[1], results[2])
+      })
+      .then( (schedule) => {
+        // console.log(schedule);
+        let promiseChain = schedule.map( route => {
+          // console.log(route);
+          return knex('routes').where('id', route.id)
+            .update({
+              driver_id: route.driver_id,
+              truck_id: route.truck_id
+            })
+        })
+        
+        Promise.all(promiseChain).then(() => {
+          res.redirect('/homepage');
+        })
       })
 
-    // res.redirect('/homepage');
   }
 }
