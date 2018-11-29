@@ -14,94 +14,108 @@
 
     <title>New Route</title>
   </head>
+
   <body>
-    <div class="container-fluid">
-      <h3 class="center-align">Welcome back "Name"</h3>
-      <div class="row ">
-        <div class="col s2">
-          <h3 class="center-align"><u>Queue</u></h3>
-          <h5>Unassigned Routes:</h5>
+    <header>
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="nav-wrapper">
+          <ul class="left">
+            <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">more_vert</i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Sidenav Menu -->
+      <ul id="slide-out" class="sidenav center">
+        <!-- Title element for Sidenav -->
+        <li><h3>Queue</h3></li>
+        <!-- List drivers below under heading -->
+        <li>
+          <h6>Drivers</h6>
+          <!-- Dynamically generate list of driver names below -->
+          <ul>
+            <li>Ron</li>
+            <li>Dan</li>
+          </ul>
+        </li>
+        <!-- List unassigned routes below -->
+        <li>
+          <h6>Routes</h6>
+          <!-- Dynnamically generate list of unassigned routes -->
+          <ul>
+            <li>Route 1</li>
+            <li>Route 2</li>
+          </ul>
+        </li>
+        <!-- Assign Schedules Button -->
+        <li>
+          <form action="/homepage" method="post">
+            <button class="btn" type="submit">Schedule</button>
+          </form>
+        </li>
+      </ul>
+    </header>
 
-
-          <!-- Modal Trigger -->
-         <a class="card lime lighten-3 darken-1 modal-trigger card-content white-text" href="#modal1">Route Name & Num</a>
-          <!-- Modal Structure -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <h4><strong>Route Name and Number</strong></h4>
-              <h6><strong>Driver:</strong></h6>
-              <p>Unassigned</p>
-              <h6><strong>Truck:</strong></h6>
-              <p>Unassigned</p>
-              <h6><strong>Distance:</strong></h6>
-              <p></p>
-              <h6><strong>Estimated Duration:</strong></h6>
-              <p></p>
-              <h6><strong>Pay:</strong></h6>
-              <p></p>
-            </div>
-            <div class="modal-footer">
-              <a href="/homepage" class="modal-close waves-effect waves-green btn-flat">Close</a>
-            </div>
+    <main>
+      <div class="container-fluid">
+        <!-- Page Content Goes Below -->
+        <!-- Welcome Message -->
+        <div class="row">
+          <div class="col s12">
+            <h3 class="center-align">Welcome back "Name"</h3>
           </div>
         </div>
-        <div class="col s9">
+        <!-- Calendar View -->
+        <div class="row">
           <table>
-           <thead>
-             <tr>
-                 <th>Mon</th>
-                 <th>Tue</th>
-                 <th>Wed</th>
-                 <th>Thr</th>
-                 <th>Fri</th>
-                 <th>Sat</th>
-                 <th>Sun</th>
-             </tr>
-           </thead>
-           <tbody>
-             <!-- One tr for every new entry -->
-             <tr>
-               <td>
-                  <!-- Modal Trigger -->
-                 <a class="card green lighten-1 darken-1 modal-trigger card-content white-text" href="#modal1">Route Name & Num</a>
-                <!-- Modal Structure -->
-                <div id="modal2" class="modal">
-                  <div class="modal-content">
-                    <h4><strong>Route Name and Number</strong></h4>
-                    <h6><strong>Driver:</strong></h6>
-                    <p></p>
-                    <h6><strong>Truck:</strong></h6>
-                    <p></p>
-                    <h6><strong>Distance:</strong></h6>
-                    <p></p>
-                    <h6><strong>Estimated Duration:</strong></h6>
-                    <p></p>
-                    <h6><strong>Pay:</strong></h6>
-                    <p></p>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="/homepage" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                  </div>
-                </div>
-               </td>
-             </tr>
-           </tbody>
-         </table>
+            <!-- Headings for table -->
+            <thead>
+              <th class="center">Sun</th>
+              <th class="center">Mon</th>
+              <th class="center">Tue</th>
+              <th class="center">Wed</th>
+              <th class="center">Thur</th>
+              <th class="center">Fri</th>
+              <th class="center">Sat</th>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+              <!-- # of table rows will be equal to # of routes on day with most routes -->
+              <tr>
+                <!-- # of table data cells will be 7/row, ie one for each day -->
+                <!-- Sunday -->
+                <td></td>
+                <!-- Monday -->
+                <td></td>
+                <!-- Tuesday -->
+                <td></td>
+                <!-- Wednesday -->
+                <td></td>
+                <!-- Thursday -->
+                <td></td>
+                <!-- Friday -->
+                <td></td>
+                <!-- Saturday -->
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-      <div class="row center">
-        <div class="col s4">
-          <a href="/new_driver"><button class="waves-effect waves-light btn" type="button" name="button">Create New Driver</button></a>
+        <!-- Buttons -->
+        <div class="row center">
+          <div class="col s4">
+            <a href="/new_driver"><button class="waves-effect waves-light btn" type="button" name="button">Create New Driver</button></a>
+          </div>
+          <div class="col s4">
+            <a href="/new_truck"><button class="waves-effect waves-light btn" type="button" name="button">Create New Truck</button></a>
+          </div>
+          <div class="col s4">
+            <a href="/new_route"><button class="waves-effect waves-light btn" type="button" name="button">Create New Route</button></a>
+          </div>
         </div>
-        <div class="col s4">
-          <a href="/new_truck"><button class="waves-effect waves-light btn" type="button" name="button">Create New Truck</button></a>
-        </div>
-        <div class="col s4">
-          <a href="/new_route"><button class="waves-effect waves-light btn" type="button" name="button">Create New Route</button></a>
-        </div>
-      </div>
 
-    </div>
+      </div>
+    </main>
 
     <!-- Initialize Materialize components -->
     <script src="/javascript/initializeMaterialize.js"></script>

@@ -21,7 +21,7 @@ module.exports = {
       })
     });
     Promise.all(promises).then(() => {
-      res.redirect('/new_route');
+      res.redirect('/homepage');
     });
   },
 

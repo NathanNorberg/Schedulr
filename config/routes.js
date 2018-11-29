@@ -21,6 +21,7 @@ module.exports = (app) => {
 
   app.use(auth);
   app.get('/homepage', homepage.index);
+  app.post('/homepage', homepage.schedule);
 
 // Forms to create new drivers, trucks and routes
   app.get('/new_driver', new_driver.index);
