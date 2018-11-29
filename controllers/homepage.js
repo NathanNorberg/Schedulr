@@ -17,21 +17,34 @@ module.exports = {
         let assignedRoutes = results[0].filter(route => route.driver_id != null && route.truck_id != null);
         let drivers = results[1];
         let trucks = results[2];
+        let monday = assignedRoutes.filter(route => route.day === 'mon');
+        let tuesday = assignedRoutes.filter(route => route.day === 'tue');
+        let wednesday = assignedRoutes.filter(route => route.day === 'wed');
+        let thursday = assignedRoutes.filter(route => route.day === 'thur');
+        let friday = assignedRoutes.filter(route => route.day === 'fri');
+        let saturday = assignedRoutes.filter(route => route.day === 'sat');
+        let sunday = assignedRoutes.filter(route => route.day === 'sun');
         // figure out how many routes appear on your busiest day
-        let longestDay = Math.max(
-          assignedRoutes.filter(route => route.day === 'mon').length,
-          assignedRoutes.filter(route => route.day === 'tue').length,
-          assignedRoutes.filter(route => route.day === 'wed').length,
-          assignedRoutes.filter(route => route.day === 'thur').length,
-          assignedRoutes.filter(route => route.day === 'fri').length,
-          assignedRoutes.filter(route => route.day === 'sat').length,
-          assignedRoutes.filter(route => route.day === 'sun').length
-        )
-        console.log(unassignedRoutes);
+        let routeCount = Math.max(monday.length, tuesday.length, wednesday.length, thursday.length, friday.length, saturday.length, sunday.length);
+        console.log(monday[0]);
 
 
         // pass data to homepage repackaged with 'readable' names
-        res.render('homepage', {user: req.session.user, assigned: assignedRoutes, unassigned: unassignedRoutes, drivers: drivers, trucks: trucks, routeCount: longestDay});
+        res.render('homepage', {
+          user: req.session.user,
+          unassigned: unassignedRoutes,
+          assigned: assignedRoutes,
+          drivers: drivers,
+          trucks: trucks,
+          longestDay: routeCount,
+          monday: monday,
+          tuesday: tuesday,
+          wednesday: wednesday,
+          thursday: thursday,
+          friday: friday,
+          saturday: saturday,
+          sunday: sunday
+        });
       })
   },
 
