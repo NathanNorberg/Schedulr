@@ -108,49 +108,189 @@
                 <!-- Sunday -->
                 <td class="center">
                   <% if (sunday[0]) { %>
-                    <%= sunday[0].name %>
+                    <!-- Modal Trigger -->
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><%= sunday[0].name %></a>
+                      <!-- Modal Structure -->
+                      <div id="modal1" class="modal">
+                        <div class="modal-content">
+                          <h4><%= sunday[0].name %></h4>
+                          <h6><strong>Day:</strong></h6>
+                          <p><%= sunday[0].day %></p>
+                          <h6><strong>Pickup Time:</strong></h6>
+                          <p><%= sunday[0].pickup_time %></p>
+                          <h6><strong>Destination:</strong></h6>
+                          <p><%= sunday[0].destination %></p>
+                          <h6><strong>Driver:</strong></h6>
+                          <p><%= sunday[0].driver_id %></p>
+                          <h6><strong>Assigned Truck:</strong></h6>
+                          <p><%= sunday[0].truck_id %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                        </div>
+                      </div>
                     <% sunday = sunday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Monday -->
                 <td class="center">
                   <% if (monday[0]) { %>
-                    <%= monday[0].name %>
+                    <!-- Modal Trigger -->
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal2"><%= monday[0].name %></a>
+                      <!-- Modal Structure -->
+                      <div id="modal2" class="modal">
+                        <div class="modal-content">
+                          <h4><%= monday[0].name %></h4>
+                          <h6><strong>Day:</strong></h6>
+                          <p><%= monday[0].day %></p>
+                          <h6><strong>Pickup Time:</strong></h6>
+                          <p><%= monday[0].pickup_time %></p>
+                          <h6><strong>Destination:</strong></h6>
+                          <p><%= monday[0].destination %></p>
+                          <h6><strong>Driver:</strong></h6>
+                          <p><%= monday[0].driver_id %></p>
+                          <h6><strong>Assigned Truck:</strong></h6>
+                          <p><%= monday[0].truck_id %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                        </div>
+                      </div>
                     <% monday = monday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Tuesday -->
                 <td class="center">
                   <% if (tuesday[0]) { %>
-                    <%= tuesday[0].name %>
+                    <!-- Modal Trigger -->
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal3"><%= tuesday[0].name %></a>
+                      <!-- Modal Structure -->
+                      <div id="modal3" class="modal">
+                        <div class="modal-content">
+                          <h4><%= tuesday[0].name %></h4>
+                          <h6><strong>Day:</strong></h6>
+                          <p><%= tuesday[0].day %></p>
+                          <h6><strong>Pickup Time:</strong></h6>
+                          <p><%= tuesday[0].pickup_time %></p>
+                          <h6><strong>Destination:</strong></h6>
+                          <p><%= tuesday[0].destination %></p>
+                          <h6><strong>Driver:</strong></h6>
+                          <p><%= tuesday[0].driver_id %></p>
+                          <h6><strong>Assigned Truck:</strong></h6>
+                          <p><%= tuesday[0].truck_id %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                        </div>
+                      </div>
                     <% tuesday = tuesday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Wednesday -->
                 <td class="center">
                   <% if (wednesday[0]) { %>
-                    <%= wednesday[0].name %>
+                    <!-- Modal Trigger -->
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal4"><%= wednesday[0].name %></a>
+                      <!-- Modal Structure -->
+                      <div id="modal4" class="modal">
+                        <div class="modal-content">
+                          <h4><%= wednesday[0].name %></h4>
+                          <h6><strong>Day:</strong></h6>
+                          <p><%= wednesday[0].day %></p>
+                          <h6><strong>Pickup Time:</strong></h6>
+                          <p><%= wednesday[0].pickup_time %></p>
+                          <h6><strong>Destination:</strong></h6>
+                          <p><%= wednesday[0].destination %></p>
+                          <h6><strong>Driver:</strong></h6>
+                          <p><%= wednesday[0].driver_id %></p>
+                          <h6><strong>Assigned Truck:</strong></h6>
+                          <p><%= wednesday[0].truck_id %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                        </div>
+                      </div>
                     <% wednesday = wednesday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Thursday -->
                 <td class="center">
                   <% if (thursday[0]) { %>
-                    <%= thursday[0].name %>
+                    <!-- Modal Trigger -->
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal5"><%= thursday[0].name %></a>
+                      <!-- Modal Structure -->
+                      <div id="modal5" class="modal">
+                        <div class="modal-content">
+                          <h4><%= thursday[0].name %></h4>
+                          <h6><strong>Day:</strong></h6>
+                          <p><%= thursday[0].day %></p>
+                          <h6><strong>Pickup Time:</strong></h6>
+                          <p><%= thursday[0].pickup_time %></p>
+                          <h6><strong>Destination:</strong></h6>
+                          <p><%= thursday[0].destination %></p>
+                          <h6><strong>Driver:</strong></h6>
+                          <p><%= thursday[0].driver_id %></p>
+                          <h6><strong>Assigned Truck:</strong></h6>
+                          <p><%= thursday[0].truck_id %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                        </div>
+                      </div>
                     <% thursday = thursday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Friday -->
                 <td class="center">
                   <% if (friday[0]) { %>
-                    <%= friday[0].name %>
+                    <!-- Modal Trigger -->
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal6"><%= friday[0].name %></a>
+                      <!-- Modal Structure -->
+                      <div id="modal6" class="modal">
+                        <div class="modal-content">
+                          <h4><%= friday[0].name %></h4>
+                          <h6><strong>Day:</strong></h6>
+                          <p><%= friday[0].day %></p>
+                          <h6><strong>Pickup Time:</strong></h6>
+                          <p><%= friday[0].pickup_time %></p>
+                          <h6><strong>Destination:</strong></h6>
+                          <p><%= friday[0].destination %></p>
+                          <h6><strong>Driver:</strong></h6>
+                          <p><%= friday[0].driver_id %></p>
+                          <h6><strong>Assigned Truck:</strong></h6>
+                          <p><%= friday[0].truck_id %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                        </div>
+                      </div>
                     <% friday = friday.splice(1) %>
                   <% } %>
                 </td>
                 <!-- Saturday -->
                 <td class="center">
                   <% if (saturday[0]) { %>
-                    <%= saturday[0].name %>
+                    <!-- Modal Trigger -->
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal7"><%= saturday[0].name %></a>
+                      <!-- Modal Structure -->
+                      <div id="modal7" class="modal">
+                        <div class="modal-content">
+                          <h4><%= saturday[0].name %></h4>
+                          <h6><strong>Day:</strong></h6>
+                          <p><%= saturday[0].day %></p>
+                          <h6><strong>Pickup Time:</strong></h6>
+                          <p><%= saturday[0].pickup_time %></p>
+                          <h6><strong>Destination:</strong></h6>
+                          <p><%= saturday[0].destination %></p>
+                          <h6><strong>Driver:</strong></h6>
+                          <p><%= saturday[0].driver_id %></p>
+                          <h6><strong>Assigned Truck:</strong></h6>
+                          <p><%= saturday[0].truck_id %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+                        </div>
+                      </div>
                     <% saturday = saturday.splice(1) %>
                   <% } %>
                 </td>
