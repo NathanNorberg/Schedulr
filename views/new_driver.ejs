@@ -26,9 +26,10 @@
       <!-- New Driver Registration Form -->
       <div class="row">
         <form class="col s6 offset-s3" action="/add_driver" method="post">
-          <!-- First name -->
+          <!-- Name -->
           <div class="row">
             <div class="input-field col s12">
+              <i class="material-icons prefix">edit</i>
               <input type="text" name="name" placeholder="Driver Name">
             </div>
           </div>
@@ -41,12 +42,14 @@
           <!-- Img URL -->
           <div class="row">
             <div class="input-field col s12">
+              <i class="material-icons prefix">local_see</i>
               <input type="text" name="img_url" placeholder="Driver Picture">
             </div>
           </div>
           <!-- Days Off Dropdown -->
           <div class="row">
             <div class="input-field col s12">
+              <i class="material-icons prefix">event</i>
               <select multiple name="daysOff" id="dates">
                 <option value="" disabled>Dates</option>
                 <option value="mon">Monday</option>
